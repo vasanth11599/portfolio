@@ -4,7 +4,7 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const slides = [
   {
-    heading: "Hi, I'm Vasanth Developer",
+    heading: "Hi, I'm Vasanth  software Developer",
     subtext: "Frontend Developer specializing in clean and interactive user interfaces using React, HTML, CSS, and JavaScript.",
     image: "/images/slide1.jpg"
   },
