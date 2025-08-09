@@ -62,21 +62,15 @@
   background-color: #0056b3;
 }
 
-.intro-right img {
+.contact-image {
   width: 100%;
-  max-width: 220px;
+  max-width: 400px;
   object-fit: contain;
   border: none;
-  border-radius: 0;
+  border-radius: 50%;
   box-shadow: none;
 }
 
-.intro-right img {
-  width: 100%;
-  max-width: 300px;
- 
- 
-}
 .logo-icon {
   font-size: 120px;
   color: #61dafb;

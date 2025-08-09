@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './About.css';
+import Image from "../assets/vasanth.jpg";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaDownload, FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode, FaDatabase, FaGithub } from 'react-icons/fa';
@@ -18,12 +19,12 @@ const About = () => {
  
   <div className="intro-row" data-aos="fade-up">
 
-    <div className="intro-right" data-aos="fade-right">
-      <img src="/images/vasanth.JPG" alt="VASANTH S" />
-    </div>
+    <div className="contact-image">
+            <img src={Image} alt="Vasanth s" />
+           </div>
 
     <div className="intro-left" data-aos="fade-left">
-      <h3>Hi, I'm <span className="highlight"> </span></h3>
+      <h3>Hi, I'm <span className="highlight"> VASANTH</span></h3>
       <p>I’m a <strong>Full-Stack Developer</strong> skilled in building scalable, efficient web applications using <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>.</p>
       <a href="/vasanthresume.pdf" download="VASANTH_S_Resume" className="download-resume-btn">
         <FaDownload /> Download Resume
