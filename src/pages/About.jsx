@@ -23,7 +23,7 @@ const About = () => {
     </div>
 
     <div className="intro-left" data-aos="fade-left">
-      <h3>Hi, I'm <span className="highlight">VASANTH </span></h3>
+      <h3>Hi, I'm <span className="highlight"> </span></h3>
       <p>I’m a <strong>Full-Stack Developer</strong> skilled in building scalable, efficient web applications using <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>.</p>
       <a href="/vasanthresume.pdf" download="VASANTH_S_Resume" className="download-resume-btn">
         <FaDownload /> Download Resume
