@@ -1,0 +1,251 @@
+/* Root Hero Section */
+.hero-section {
+  position: relative;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  transition: background-image 0.6s ease-in-out;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+}
+
+/* Overlay for dark background tint */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(10, 10, 10, 0.4));
+  z-index: 1;
+}
+
+/* Content and Image Container */
+.hero-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Text Section */
+.hero-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.hero-content h1 {
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.hero-content p {
+  font-size: 2rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+/* Image Section */
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 1020px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Slide Controls - bottom-right */
+.slide-controls-fixed {
+  position: absolute;
+  bottom: 4rem;
+  right: 2rem;
+  z-index: 3;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-btn:hover {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: #fff;
+  transform: scale(1.1) rotate(8deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+  .hero-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .hero-image img {
+    max-width: 320px;
+    margin-top: 2rem;
+  }
+
+  .slide-controls-fixed {
+    bottom: 1.5rem;
+    right: 1rem;
+    gap: 1rem;
+  }
+
+  .nav-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-image img {
+    max-width: 260px;
+  }
+}
+
+/* Animated Gradient Button */
+.animated-btn {
+  position: relative;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0a0000;
+  background:white;
+  background-size: 600% 600%;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(244, 241, 242, 0.4);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  animation: gradientShift 8s ease infinite;
+  overflow: hidden;
+  user-select: none;
+  display: inline-block;
+  text-align: center;
+  /* Add some margin for spacing if needed */
+  margin-top: 1rem;
+}
+
+.animated-btn:hover {
+  box-shadow: 0 10px 25px rgba(15, 1, 4, 0.7);
+  animation-play-state: paused;
+  transform: scale(1.05);
+}
+
+/* Subtle shine animation */
+.animated-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: rotate(25deg);
+  transition: opacity 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.animated-btn:hover::after {
+  opacity: 1;
+  animation: shineMove 1.2s forwards;
+}
+
+/* Gradient shifting animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Shine sliding */
+@keyframes shineMove {
+  0% {
+    transform: translateX(-100%) rotate(25deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+/* Optional: Position button wrapper inside hero */
+.explore-btn-wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 3;
+}

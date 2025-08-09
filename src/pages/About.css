@@ -1,0 +1,211 @@
+/* ========== GENERAL ========== */
+.skill-item, .intro-left, .intro-right, .info-section {
+  transition: all 0.3s ease-in-out;
+}
+
+.about-section {
+  background: #f9f7f7;
+  padding: 4rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f1f1f;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ========== SECTION 1: INTRO ========== */
+.intro-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #060647;
+}
+
+.intro-left {
+  flex: 1;
+}
+
+.intro-left h3 {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.highlight {
+  color: #007bff;
+}
+
+.intro-left p {
+  font-size: 1.1rem;
+  margin-bottom: 5rem;
+  line-height: 1.6;
+}
+
+.download-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.4rem;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.download-resume-btn:hover {
+  background-color: #0056b3;
+}
+
+.intro-right img {
+  width: 100%;
+  max-width: 220px;
+  object-fit: contain;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.intro-right img {
+  width: 100%;
+  max-width: 300px;
+ 
+ 
+}
+.logo-icon {
+  font-size: 120px;
+  color: #61dafb;
+  animation: spin 5s linear infinite;
+}
+
+/* Optional spin animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ========== SECTION 2: SKILLS ========== */
+.skills-section {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 2rem;
+}
+
+.skills-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.skills-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+  font-size: 0.95rem;
+  min-width: 100px;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+/* Icon colors */
+.html { color: #e44d26; }
+.css { color: #264de4; }
+.js { color: #f7df1e; }
+.react { color: #61dafb; }
+.redux { color: #764abc; }
+.node { color: #3c873a; }
+.express { color: #000; }
+.mongo { color: #4db33d; }
+.sql { color: #003B57; }
+.github { color: #24292e; }
+
+/* ========== SECTION 3: INFO BLOCKS ========== */
+.info-row-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 3rem;
+  border-top: 2px solid #f0f0f0;
+  gap: 1.5rem;
+}
+
+.info-section {
+  flex: 1 1 220px;
+  border-right: 1px solid #ddd;
+  padding-right: 1.5rem;
+}
+
+.info-section:last-child {
+  border-right: none;
+}
+
+.info-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #007bff;
+}
+
+.info-section p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 992px) {
+  .intro-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skills-group {
+    gap: 1.5rem;
+  }
+
+  .info-row-line {
+    flex-direction: column;
+    border: none;
+  }
+
+  .info-section {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+  }
+
+  .info-section:last-child {
+    border-bottom: none;
+  }
+
+  .intro-right img {
+    margin-top: 1.5rem;
+  }
+}

@@ -1,0 +1,133 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  scroll-behavior: smooth;
+}
+
+/* === Navbar === */
+.navbar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* === Logo === */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color:white;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* === Hamburger Menu (for mobile) === */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  justify-content: space-between;
+}
+
+.menu-toggle span {
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* === Nav Links === */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  padding: 0.3rem 0;
+  transition: color 0.3s ease-in-out;
+}
+
+/* === Hover Underline Effect === */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #007cf0;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #007cf0;
+}
+
+/* === Active Link === */
+.nav-links .active {
+  color: #007cf0;
+}
+
+.nav-links .active::after {
+  width: 100%;
+}
+
+/* === Responsive Styles === */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 2rem;
+    gap: 2rem;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.4s ease;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+}

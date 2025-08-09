@@ -1,0 +1,129 @@
+.skills-vertical-section {
+  padding: 4rem 2rem;
+  background: #f7f9fc;
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.skills-section-block {
+  margin-bottom: 4rem;
+}
+
+.skills-section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+  text-align: center;
+}
+
+/* 🖼️ Illustration - standalone center (frontend) */
+.skills-illustration-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.skills-illustration {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ➡️ Flex layout for backend + database */
+.skill-flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.skill-flex-row.reverse-row {
+  flex-direction: row-reverse;
+}
+
+/* 🧱 Skill grid (content) */
+.skills-pair-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  flex: 1;
+}
+
+/* Image side */
+.side-image {
+  flex: 1;
+  text-align: center;
+}
+
+/* 💳 Skill cards */
+.skill-card-vertical {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  padding: 1.5rem;
+  max-width: 340px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: transform 0.3s;
+}
+
+.skill-card-vertical:hover {
+  transform: translateY(-5px);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.skill-name {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Frontend vertical line layout */
+.frontend-section-multi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.single-skill-line-block {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.vertical-line.skill-line {
+  width: 4px;
+  height: 100%;
+  background-color: #ccc;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* Responsive fix */
+@media (max-width: 768px) {
+  .skill-flex-row {
+    flex-direction: column !important;
+  }
+}

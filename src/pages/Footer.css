@@ -1,0 +1,54 @@
+
+
+.footer {
+  background-color:black;
+  color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer p {
+  margin-bottom: 1rem;
+}
+
+.footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer .socials a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer .socials a:hover {
+  color: #00bcd4;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .footer .socials {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* Dark mode support using body class */
+body.dark .footer {
+  background-color: #1a1a2e;
+  color: #ccc;
+}
+
+body.dark .footer .socials a {
+  color: #ccc;
+}
+
+body.dark .footer .socials a:hover {
+  color: #4dd0e1;
+}
